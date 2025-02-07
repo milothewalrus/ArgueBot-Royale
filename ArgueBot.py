@@ -108,19 +108,19 @@ if __name__ == "__main__":
         description="Debate between two LLMs via Ollama. The debate runs endlessly and expands logically."
     )
     parser.add_argument("--model_a", type=str,
-                        default="hf.co/TheDrummer/Tiger-Gemma-9B-v3-GGUF:Q4_K_M",
-                        help="Ollama model identifier for Model A (e.g., Tiger Gemma).")
+                        default="llama3",
+                        help="Ollama model identifier for Model A (e.g., Llama3).")
     parser.add_argument("--model_b", type=str,
-                        default="hf.co/TheDrummer/Tiger-Gemma-9B-v3-GGUF:Q4_K_M", #hf.co/bartowski/gemma-2-2b-it-GGUF:Q4_K_M",
-                        help="Ollama model identifier for Model B (e.g., Gemma 2 2B).")
+                        default="llama3", 
+                        help="Ollama model identifier for Model B (e.g., Llama3.")
     parser.add_argument("--meta_prompt_file", type=str,
-                        default="/Users/miles/Code/philo-royale/meta_prompt.txt",
+                        default="/Users/miles/Code/ArgueBot-Royale/meta_prompt.txt", #REPLACE WITH YOUR DIR
                         help="Path to the meta prompt file.")
     parser.add_argument("--perspective_a_file", type=str,
-                        default="/Users/miles/Code/philo-royale/A_prompt.txt",
+                        default="/Users/miles/Code/ArgueBot-Royale/A_prompt.txt",
                         help="Path to perspective prompt for Model A.")
     parser.add_argument("--perspective_b_file", type=str,
-                        default="/Users/miles/Code/philo-royale/B_prompt.txt",
+                        default="/Users/miles/Code/ArgueBot-Royale/B_prompt.txt",
                         help="Path to perspective prompt for Model B.")
 
     args = parser.parse_args()
